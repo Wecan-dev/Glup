@@ -16,45 +16,28 @@
       <h2>NUESTRAS SOLUCIONES</h2>
     </div>
     
-    <div class="main-solutions-logos">
-    <?php $args = array( 'post_type' => 'soluciones_logos', 'posts_per_page' => '3' ); ?>
-            <?php $loop = new WP_Query( $args ); ?>
-                 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-      <img src="<?php echo get_the_post_thumbnail_url(); ?>">
-      <?php endwhile; ?>
+     <div class="main-solutions-logos">
+      <img src="<?php echo get_theme_mod('logos_1'); ?>">
+      <img src="<?php echo get_theme_mod('logos_2'); ?>">
+      <img src="<?php echo get_theme_mod('logos_3'); ?>">
     </div>
     
     <div class="row">
+       <?php $args = array( 'post_type' => 'soluciones_card', 'posts_per_page' => '3' ); ?>
+            <?php $loop = new WP_Query( $args ); ?>
+                 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
       <div class="col-lg-4">
         <div class="solution-card">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=750&amp;q=80">
-          <div class="solution-card-text">
-            <h4>Para tu empresa</h4>
-            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.Lorem Ipsum es simplemente.</p>
+           <img src="<?php echo get_the_post_thumbnail_url(); ?>">
+           <div class="solution-card-text">
+            <h4><?php the_title(); ?></h4>
+            <p><?php the_content(); ?></p>
             <a class="btn-custom secondary" href="#">Cotiza ahora</a>
           </div>
         </div>
       </div>
-      <div class="col-lg-4">
-        <div class="solution-card">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=750&amp;q=80">
-          <div class="solution-card-text">
-            <h4>Para tu empresa</h4>
-            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.Lorem Ipsum es simplemente.</p>
-            <a class="btn-custom secondary" href="#">Cotiza ahora</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="solution-card">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=750&amp;q=80">
-          <div class="solution-card-text">
-            <h4>Para tu empresa</h4>
-            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.Lorem Ipsum es simplemente.</p>
-            <a class="btn-custom secondary" href="#">Cotiza ahora</a>
-          </div>
-        </div>
-      </div>
+       <?php endwhile; ?>
+      
     </div>
   </section>
   <section class="apps-solutions bg-lightgray">

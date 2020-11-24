@@ -10,6 +10,7 @@
     </div>
   </div>
     <?php endwhile; ?>
+
   <section class="main-clients">
     <div class="title">
       <h3>nuestros</h3>

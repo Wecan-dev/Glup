@@ -817,6 +817,7 @@ textarea.form-control {
   font-size: 14px;
   font-family: "HelveticaNeue-Regular";
   color: #3d3d3d;
+  list-style-type: none !important;
 }
 
 .list-checks li::before {

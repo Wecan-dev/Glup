@@ -17,7 +17,7 @@
         <h2>nuestros servicios</h2>
       </div>
       <div class="row">
-      <?php $args = array( 'post_type' => 'nuestros_servicios', 'posts_per_page' => '4' ); ?>
+      <?php $args = array( 'post_type' => 'servicios', 'posts_per_page' => '4' ); ?>
             <?php $loop = new WP_Query( $args ); ?>
                  <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <div class="col-lg-3 col-md-6">

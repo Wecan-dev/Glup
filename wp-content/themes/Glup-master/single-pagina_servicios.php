@@ -27,14 +27,7 @@
         </div>
         <div class="single-service-list">
           <ul class="list-checks primary">
-            <li><?php the_field('nuestros_servicios_item-1'); ?></li>
-            <li><?php the_field('nuestros_servicios_item-2'); ?></li>
-            <li><?php the_field('nuestros_servicios_item-3'); ?></li>
-            <li><?php the_field('nuestros_servicios_item-4'); ?></li>
-            <li><?php the_field('nuestros_servicios_item-5'); ?></li>
-            <li><?php the_field('nuestros_servicios_item-6'); ?></li>
-            <li><?php the_field('nuestros_servicios_item-7'); ?></li>
-            <li><?php the_field('nuestros_servicios_item-8'); ?></li>
+           <li><?php the_content()?></li>
           </ul>
           <div class="list-image">
                <?php $image = get_field('nuestros_servicios_imagen'); ?>

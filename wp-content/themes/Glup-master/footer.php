@@ -6,22 +6,22 @@
         </a>
         <ul class='navbar-nav margin-auto menu'>
           <li class='nav-item'>
-            <a class='nav-link' href='/'>Inicio</a>
+            <a class='nav-link' href='<?php bloginfo('url');?>/'>Inicio</a>
           </li>
           <li class='nav-item'>
-            <a class='nav-link' href='services.html'>Servicios</a>
+            <a class='nav-link' href='<?php bloginfo('url');?>/Service'>Servicios</a>
           </li>
           <li class='nav-item'>
-            <a class='nav-link' href='apps.html'>Apps y Soluciones</a>
+            <a class='nav-link' href='<?php bloginfo('url');?>/apps'>Apps y Soluciones</a>
           </li>
           <li class='nav-item'>
-            <a class='nav-link' href='stories.html'>Historias de Éxito</a>
+            <a class='nav-link' href='<?php bloginfo('url');?>/historia'>Historias de Éxito</a>
           </li>
           <li class='nav-item'>
-            <a class='nav-link' href='jobs.html'>Jobs</a>
+            <a class='nav-link' href='<?php bloginfo('url');?>/jobs'>Jobs</a>
           </li>
           <li class='nav-item'>
-            <a class='nav-link' href='contact.html'>Contacto</a>
+            <a class='nav-link' href='<?php bloginfo('url');?>/contacto'>Contacto</a>
           </li>
           <li class='nav-item'>
             <a class='nav-link' href='#'>Aviso de privacidad</a>
@@ -32,7 +32,7 @@
         </ul>
         <ul class='navbar-nav button'>
           <li>
-            <a class='btn btn-custom gradient' href=''>¡Cotiza ahora!</a>
+            <a class='btn btn-custom gradient' href='<?php bloginfo('url');?>/#cotiza'>¡Cotiza ahora!</a>
           </li>
         </ul>
       </nav>
@@ -40,26 +40,31 @@
     <div class='footer-bottom'>
       <div class='footer-rrss'>
         <ul>
-          <li>
-            <a href='#'>
-              <i class='fa fa-facebook'></i>
-            </a>
-          </li>
-          <li>
-            <a href='#'>
+          <?php if (get_theme_mod('texto_linkedln') != NULL){?>  
+           <li>
+            <a target=”_blank href="<?php echo get_theme_mod('texto_linkedln') ?>">
               <i class='fa fa-linkedin'></i>
             </a>
           </li>
+         <?php }
+         ?> 
+         <?php if (get_theme_mod('texto_instagram') != NULL){?>  
           <li>
-            <a href='#'>
+            <a target=”_blank href='<?php echo get_theme_mod('texto_instagram') ?>'>
               <i class='fa fa-instagram'></i>
             </a>
           </li>
+           <?php }
+         ?> 
+          <?php if (get_theme_mod('texto_twiter') != NULL){?>  
           <li>
-            <a href='#'>
+            <a target=”_blank href='<?php echo get_theme_mod('texto_twiter') ?>'>
+
               <i class='fa fa-twitter'></i>
             </a>
           </li>
+          <?php }
+         ?> 
         </ul>
       </div>
       <span>Copyright @ 2020 Glup / Developed by Sigma</span>

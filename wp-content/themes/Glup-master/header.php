@@ -41,7 +41,7 @@
           <a class='nav-link' href='<?php bloginfo('url');?>/'>Inicio</a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link' href='<?php bloginfo('url');?>/services'>
+          <a class='nav-link' href='<?php bloginfo('url');?>/service'>
             Servicios
             <i class='fa fa-chevron-down'></i>
           </a>
@@ -75,7 +75,7 @@
       </ul>
       <ul class='navbar-nav'>
         <li>
-          <a class='btn btn-custom gradient' href=''>¡Cotiza ahora!</a>
+          <a class='btn btn-custom gradient' href='<?php bloginfo('url');?>/#cotiza'>¡Cotiza ahora!</a>
         </li>
       </ul>
     </div>

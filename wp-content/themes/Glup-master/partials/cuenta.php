@@ -1,9 +1,12 @@
 <section class="cta">
     <img alt="Linked in logo" class="cta-img" src="<?php echo get_theme_mod('prenavbar2_image'); ?>">
-    <p><?php echo get_theme_mod('texto'); ?></p>
-    <a class="btn btn-custom light small" href="#">Ver más</a>
+    <p><?php echo get_theme_mod('texto_red_social'); ?></p>
+    <?php if (get_theme_mod('boton_red_social_texto') != NULL){?>  
+    <a class="btn btn-custom light small" href="<?php echo get_theme_mod('boton_red_social_url'); ?>"> <?php echo get_theme_mod('boton_red_social_texto'); ?></a>
+             <?php }
+         ?>
   </section>
-  <section class="main-cotization bg-lightgray">
+  <section id="cotiza" class="main-cotization bg-lightgray">
     <div class="title">
       <h2>¡Cotiza Ahora!</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi, amet consectetur adipiscing</p>
@@ -31,63 +34,11 @@
             <div aria-labelledby="productA-tab" class="tab-pane fade show active" id="productA" role="tabpanel">
               <p class="mb-3">Venta de paquetes de horas para soporte y consultoría</p>
               <form>
-                <div class="row">
-                  <div class="col-lg-6">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/user.png">
-                        </span>
-                      </div>
-                      <input class="form-control" placeholder="Nombre" type="text">
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/phone.png">
-                        </span>
-                      </div>
-                      <input class="form-control" placeholder="Teléfono" type="text">
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/envelope.png">
-                        </span>
-                      </div>
-                      <input class="form-control" placeholder="Correo" type="text">
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/multimedia-option.png">
-                        </span>
-                      </div>
-                      <input class="form-control" placeholder="Adjunto" type="text">
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text align-items-start">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/draw.png">
-                        </span>
-                      </div>
-                      <textarea class="form-control" placeholder="Mensaje" type="text"></textarea>
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="text-center">
-                      <button class="btn btn-custom secondary radius-8" type="submit">Enviar</button>
-                    </div>
-                  </div>
-                </div>
+                
+                  
+                 <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 4, 'title' => false, 'description' => false ) ); ?>
+                  
+                 
               </form>
             </div>
             <div aria-labelledby="productB-tab" class="tab-pane fade" id="productB" role="tabpanel">
