@@ -36,9 +36,9 @@ $(".main-license-slider").slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   prevArrow:
-    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='<?php echo get_template_directory_uri(); ?>/assets/img/icons/arrow_left.png'></button>",
+    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='http://localhost/glup/wp-content/uploads/2020/11/arrow_left.png'></button>",
   nextArrow:
-    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='<?php echo get_template_directory_uri(); ?>/assets/img/icons/arrow_right.png'></button>",
+    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='http://localhost/glup/wp-content/uploads/2020/11/arrow_right.png'></button>",
   responsive: [
     {
       breakpoint: 991,
@@ -64,9 +64,9 @@ $(".main-team-slider").slick({
   slidesToShow: 4,
   slidesToScroll: 1,
   prevArrow:
-    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='assets/img/icons/arrow_left.png'></button>",
+    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='http://localhost/glup/wp-content/uploads/2020/11/arrow_left.png'></button>",
   nextArrow:
-    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='assets/img/icons/arrow_right.png'></button>",
+    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='http://localhost/glup/wp-content/uploads/2020/11/arrow_right.png'></button>",
   responsive: [
     {
       breakpoint: 991,
@@ -92,9 +92,9 @@ $(".gallery-slider").slick({
   slidesToShow: 4,
   slidesToScroll: 1,
   prevArrow:
-    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='assets/img/icons/arrow_left.png'></button>",
+    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='http://localhost/glup/wp-content/uploads/2020/11/arrow_left.png'></button>",
   nextArrow:
-    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='assets/img/icons/arrow_right.png'></button>",
+    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='http://localhost/glup/wp-content/uploads/2020/11/arrow_right.png'></button>",
   responsive: [
     {
       breakpoint: 1025,
@@ -127,9 +127,9 @@ $(".solutions-slider").slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   prevArrow:
-    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='assets/img/icons/arrow_left.png'></button>",
+    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='http://localhost/glup/wp-content/uploads/2020/11/arrow_left.png'></button>",
   nextArrow:
-    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='/assets/img/icons/arrow_right.png'></button>",
+    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='http://localhost/glup/wp-content/uploads/2020/11/arrow_right.png'></button>",
   responsive: [
     {
       breakpoint: 1024,
@@ -162,9 +162,9 @@ $(".main-clients-slider").slick({
   slidesToShow: 6,
   slidesToScroll: 1,
   prevArrow:
-    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='assets/img/icons/arrow_left_blue.png'></button>",
+    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='http://localhost/glup/wp-content/uploads/2020/11/arrow_left_blue.png'></button>",
   nextArrow:
-    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='assets/img/icons/arrow_right_blue.png'></button>",
+    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='http://localhost/glup/wp-content/uploads/2020/11/arrow_right_blue.png'></button>",
   responsive: [
     {
       breakpoint: 1024,

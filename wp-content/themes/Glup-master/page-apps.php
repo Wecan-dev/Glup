@@ -32,7 +32,7 @@
            <div class="solution-card-text">
             <h4><?php the_title(); ?></h4>
             <p><?php the_content(); ?></p>
-            <a class="btn-custom secondary" href="#">Cotiza ahora</a>
+            <a class="btn-custom secondary" href="<?php the_field('soluciones_card_url'); ?>"><?php the_field('soluciones_card_texto'); ?></a>
           </div>
         </div>
       </div>
@@ -47,38 +47,38 @@
     </div>
     <div class="container">
       <div class="title">
-        <h3>Soluciones en</h3>
-        <h2>integración de productos</h2>
+        <h3><?php echo get_theme_mod('integracion_producto_subtitle'); ?></h3>
+        <h2><?php echo get_theme_mod('integracion_producto_title'); ?></h2>
       </div>
       <div class="icons-box">
         <div class="row">
           <div class="col-lg-4">
             <div class="icon-text-box">
               <div class="icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/data.png">
+                <img src="<?php echo get_theme_mod('integracion_producto_image_1'); ?>">
               </div>
               <div class="text">
-                <h3>Lorem ipsum</h3>
+                <h3><?php echo get_theme_mod('integracion_producto_title_img_1'); ?></h3>
               </div>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="icon-text-box">
               <div class="icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/tv.png">
+                <img src="<?php echo get_theme_mod('integracion_producto_image_2'); ?>">
               </div>
               <div class="text">
-                <h3>Lorem ipsum</h3>
+                <h3><?php echo get_theme_mod('integracion_producto_title_img_2'); ?></h3>
               </div>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="icon-text-box">
               <div class="icon">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/server.png">
+                <img src="<?php echo get_theme_mod('integracion_producto_image_3'); ?>">
               </div>
               <div class="text">
-                <h3>Lorem ipsum</h3>
+                <h3><?php echo get_theme_mod('integracion_producto_title_img_3'); ?></h3>
               </div>
             </div>
           </div>
@@ -94,8 +94,11 @@
     </div>
     <div class="container">
       <div class="solutions-slider">
+      <?php $args = array( 'post_type' => 'metodologias' ); ?>
+            <?php $loop = new WP_Query( $args ); ?>
+                 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <div class="solution-item">
-          <img src="https://masters.engin.umich.edu/wp-content/uploads/2020/08/ISD-manufacturing-what-you-can-do-314-300x300.jpg">
+          <img src="<?php echo get_the_post_thumbnail_url(); ?>">
           <div class="solution-item-text">
             <div class="solution-title custom-collapse">
               <h4>Lorem ipsum</h4>
@@ -104,50 +107,25 @@
             <p class="content-initial">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
           </div>
         </div>
-        <div class="solution-item">
-          <img src="https://masters.engin.umich.edu/wp-content/uploads/2020/08/ISD-manufacturing-what-you-can-do-314-300x300.jpg">
-          <div class="solution-item-text">
-            <div class="solution-title custom-collapse">
-              <h4>Lorem ipsum</h4>
-              <img class="custom-collapse" src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/arrow_down.svg">
-            </div>
-            <p class="content-initial">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
-          </div>
-        </div>
-        <div class="solution-item">
-          <img src="https://masters.engin.umich.edu/wp-content/uploads/2020/08/ISD-manufacturing-what-you-can-do-314-300x300.jpg">
-          <div class="solution-item-text">
-            <div class="solution-title custom-collapse">
-              <h4>Lorem ipsum</h4>
-              <img class="custom-collapse" src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/arrow_down.svg">
-            </div>
-            <p class="content-initial">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
-          </div>
-        </div>
-        <div class="solution-item">
-          <img src="https://masters.engin.umich.edu/wp-content/uploads/2020/08/ISD-manufacturing-what-you-can-do-314-300x300.jpg">
-          <div class="solution-item-text">
-            <div class="solution-title custom-collapse">
-              <h4>Lorem ipsum</h4>
-              <img class="custom-collapse" src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/arrow_down.svg">
-            </div>
-            <p class="content-initial">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
-          </div>
-        </div>
+         <?php endwhile; ?>
+
+        
       </div>
     </div>
   </section>
   <section class="solutions-process">
     <div class="container">
       <div class="row">
+         <?php $args = array( 'post_type' => 'procesos' ); ?>
+            <?php $loop = new WP_Query( $args ); ?>
+                 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <div class="col-lg-6">
           <div class="process-text">
             <div class="side-title">
-              <h3>Conoce nuestros</h3>
-              <h2>Procesos</h2>
+               <h3><?php the_title() ?></h3>
+                <h2><?php the_field('procesos_subtitle'); ?></h2>
             </div>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <p><?php the_content() ?></p>
             <a class="white-hiperlink" href="about.html">
               Nuestro equipo
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/small_arrow.svg">
@@ -161,6 +139,7 @@
         </div>
       </div>
     </div>
+    <?php endwhile; ?>
   </section>
   <?php get_footer(); ?>
 

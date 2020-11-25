@@ -41,10 +41,16 @@
     </div>
   </section>
   <section class="cta">
-    <img alt="Brindamos soporte técnico" class="cta-icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/team.png">
-    <h2>Brindamos soporte técnico</h2>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-    <a class="btn btn-custom light small" href="#">Ver más</a>
+     <?php if (get_theme_mod('soporte_tecnico_img') != NULL){?>  
+    <img alt="Brindamos soporte técnico" class="cta-icon" src="<?php echo get_theme_mod('soporte_tecnico_img'); ?>">
+    <?php }
+         ?> 
+    <h2><?php echo get_theme_mod('soporte_tecnico_title'); ?></h2>
+    <p><?php echo get_theme_mod('soporte_tecnico_subtitle'); ?></p>
+    <?php if (get_theme_mod('soporte_tecnico_boton_texto') != NULL){?>  
+    <a class="btn btn-custom light small" href="<?php echo get_theme_mod('soporte_tecnico_boton_url'); ?>"><?php echo get_theme_mod('soporte_tecnico_boton_texto'); ?></a>
+  <?php }
+  ?>
   </section>
   <section class="service-features bg-lightgray">
     <div class="svg-element">
@@ -82,40 +88,79 @@
   <section class="gallery">
     <div class="container">
       <div class="title">
-        <h2>Galería</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi, amet consectetur adipiscing</p>
+         <?php if (get_theme_mod('galeria_titulo') != NULL){?>  
+        <h2><?php echo get_theme_mod('galeria_titulo'); ?></h2>
+         <?php }
+  ?>
+    <?php if (get_theme_mod('galeria_subtitulo') != NULL){?>  
+        <p><?php echo get_theme_mod('galeria_subtitulo'); ?></p>
+              <?php }
+  ?>
       </div>
       <div class="gallery-slider">
         <div class="gallery-item">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gallery/1.jpg">
+            <?php if (get_theme_mod('galeria_item_1') != NULL){?>  
+          <img src="<?php echo get_theme_mod('galeria_item_1'); ?>">
+           <?php }
+  ?>
         </div>
         <div class="gallery-item">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gallery/2.jpg">
+          <?php if (get_theme_mod('galeria_item_2') != NULL){?>  
+          <img src="<?php echo get_theme_mod('galeria_item_2'); ?>">
+            <?php }
+  ?>
         </div>
         <div class="gallery-item">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gallery/3.jpg">
+          <?php if (get_theme_mod('galeria_item_3') != NULL){?>  
+          <img src="<?php echo get_theme_mod('galeria_item_3'); ?>">
+            <?php }
+  ?>
         </div>
         <div class="gallery-item">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gallery/4.jpg">
+          <?php if (get_theme_mod('galeria_item_4') != NULL){?>  
+          <img src="<?php echo get_theme_mod('galeria_item_4'); ?>">
+            <?php }
+  ?>
         </div>
         <div class="gallery-item">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gallery/1.jpg">
+          <?php if (get_theme_mod('galeria_item_5') != NULL){?>  
+          <img src="<?php echo get_theme_mod('galeria_item_5'); ?>">
+            <?php }
+  ?>
         </div>
         <div class="gallery-item">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gallery/2.jpg">
+          <?php if (get_theme_mod('galeria_item_6') != NULL){?>  
+          <img src="<?php echo get_theme_mod('galeria_item_6'); ?>">
+            <?php }
+  ?>
         </div>
         <div class="gallery-item">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gallery/3.jpg">
+          <?php if (get_theme_mod('galeria_item_7') != NULL){?>  
+          <img src="<?php echo get_theme_mod('galeria_item_7'); ?>">
+            <?php }
+  ?>
         </div>
         <div class="gallery-item">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gallery/4.jpg">
+          <?php if (get_theme_mod('galeria_item_8') != NULL){?>  
+          <img src="<?php echo get_theme_mod('galeria_item_8'); ?>">
+            <?php }
+  ?>
         </div>
       </div>
     </div>
   </section>
   <section class="cta-bg" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/cta-bg.jpg)">
-    <h2>Contáctanos para darte el mejor servicio</h2>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-    <a class="btn btn-custom light small" href="contact.html">Contacto</a>
+    <?php if (get_theme_mod('Contáctanos/servicio_title') != NULL){?>  
+    <h2><?php echo get_theme_mod('Contáctanos/servicio_title'); ?></h2>
+     <?php }
+  ?>
+   <?php if (get_theme_mod('Contáctanos/servicio_subtitle') != NULL){?>  
+    <p><?php echo get_theme_mod('Contáctanos/servicio_subtitle'); ?></p>
+    <?php }
+  ?>
+     <?php if (get_theme_mod('Contáctanos/servicio_texto_boton') != NULL){?>  
+    <a class="btn btn-custom light small" href="<?php echo get_theme_mod('Contáctanos/servicio_url_boton'); ?>"><?php echo get_theme_mod('Contáctanos/servicio_texto_boton'); ?></a>
+     <?php }
+  ?>
   </section>
   <?php get_footer(); ?>

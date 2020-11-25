@@ -12,52 +12,103 @@
     <?php endwhile; ?>
 
   <section class="main-clients">
+    <?php $args = array( 'post_type' => 'galeria', 'posts_per_page' => '1' ); ?>
+            <?php $loop = new WP_Query( $args ); ?>
+                 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
     <div class="title">
       <h3>nuestros</h3>
-      <h2>clientes</h2>
+      <h2><?php the_title(); ?></h2>
     </div>
     <div class="main-clients-text">
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+      <p><?php the_content(); ?></p>
     </div>
+    <?php if (get_field('clientes_img_item_1') != NULL){?>  
     <div class="main-clients-slider">
       <div class="main-client-item">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logos/client-1.png">
+        <?php $image = get_field('clientes_img_item_1'); ?>
+      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
       </div>
+      <?php }
+         ?> 
+      <?php if (get_field('clientes_img_item_2') != NULL){?>  
       <div class="main-client-item">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logos/client-2.png">
+        <?php $image = get_field('clientes_img_item_2'); ?>
+      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
       </div>
+      <?php }
+         ?> 
+      <?php if (get_field('clientes_img_item_3') != NULL){?>  
       <div class="main-client-item">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logos/client-3.png">
+        <?php $image = get_field('clientes_img_item_3'); ?>
+      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
       </div>
+      <?php }
+         ?> 
+      <?php if (get_field('clientes_img_item_4') != NULL){?>  
       <div class="main-client-item">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logos/client-4.png">
+        <?php $image = get_field('clientes_img_item_4'); ?>
+      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
       </div>
+      <?php }
+         ?> 
+      <?php if (get_field('clientes_img_item_5') != NULL){?>  
       <div class="main-client-item">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logos/client-5.png">
+        <?php $image = get_field('clientes_img_item_5'); ?>
+      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
       </div>
+      <?php }
+         ?> 
+      <?php if (get_field('clientes_img_item_6') != NULL){?>  
       <div class="main-client-item">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logos/client-6.png">
+        <?php $image = get_field('clientes_img_item_6'); ?>
+      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
       </div>
+      <?php }
+         ?> 
+       <?php if (get_field('clientes_img_item_7') != NULL){?>  
       <div class="main-client-item">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logos/client-1.png">
+        <?php $image = get_field('clientes_img_item_7'); ?>
+      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
       </div>
+       <?php }
+         ?> 
+          <?php if (get_field('clientes_img_item_8') != NULL){?>  
       <div class="main-client-item">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logos/client-2.png">
+        <?php $image = get_field('clientes_img_item_8'); ?>
+      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
       </div>
+       <?php }
+         ?> 
+       <?php if (get_field('clientes_img_item_8') != NULL){?>  
       <div class="main-client-item">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logos/client-3.png">
+        <?php $image = get_field('clientes_img_item_8'); ?>
+      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
       </div>
+       <?php }
+         ?> 
+       <?php if (get_field('clientes_img_item_9') != NULL){?>  
       <div class="main-client-item">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logos/client-4.png">
+        <?php $image = get_field('clientes_img_item_9'); ?>
+      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
       </div>
+       <?php }
+         ?> 
+       <?php if (get_field('clientes_img_item_10') != NULL){?>  
       <div class="main-client-item">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logos/client-5.png">
+        <?php $image = get_field('clientes_img_item_10'); ?>
+      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
       </div>
+       <?php }
+         ?> 
+       <?php if (get_field('clientes_img_item_12') != NULL){?>  
       <div class="main-client-item">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logos/client-6.png">
+        <?php $image = get_field('clientes_img_item_12'); ?>
+      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
       </div>
+       <?php }
+         ?> 
     </div>
+    <?php endwhile; ?>
   </section>
   <section class="main-stories bg-lightgray">
     <div class="svg-element">
@@ -80,95 +131,31 @@
           </div>
         </div>
       </div>
+     
       <div class="col-lg-8">
         <div class="main-stories-slider">
+           <?php $args = array( 'post_type' => 'historia' ); ?>
+            <?php $loop = new WP_Query( $args ); ?>
+                 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
           <div class="main-story-item">
             <div class="story-item-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logos/client-1.png">
-              <div class="story-item-badge">2017</div>
+              <img src="<?php echo get_the_post_thumbnail_url(); ?>">
+              <div class="story-item-badge"><?php the_field('ano'); ?></div>
             </div>
             <div class="story-item-text">
-              <h4>Cerámica italia</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.</p>
-              <a class="hiperlink" href="#">
-                Siguiente
+              <h4><?php the_title(); ?></h4>
+              <p><?php the_content(); ?></p>
+              <a class="hiperlink" href=" <?php the_field('historia_boton_url'); ?>">
+                <?php the_field('historia_boton_texto'); ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/small_arrow_blue.svg">
               </a>
             </div>
-          </div>
-          <div class="main-story-item">
-            <div class="story-item-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logos/client-2.png">
-              <div class="story-item-badge">2018</div>
-            </div>
-            <div class="story-item-text">
-              <h4>Caffam</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.</p>
-              <a class="hiperlink" href="#">
-                Siguiente
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/small_arrow_blue.svg">
-              </a>
-            </div>
-          </div>
-          <div class="main-story-item">
-            <div class="story-item-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logos/client-6.png">
-              <div class="story-item-badge">2019</div>
-            </div>
-            <div class="story-item-text">
-              <h4>Acción Fiduciaria</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.</p>
-              <a class="hiperlink" href="#">
-                Siguiente
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/small_arrow_blue.svg">
-              </a>
-            </div>
-          </div>
-          <div class="main-story-item">
-            <div class="story-item-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logos/client-1.png">
-              <div class="story-item-badge">2017</div>
-            </div>
-            <div class="story-item-text">
-              <h4>Cerámica italia</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.</p>
-              <a class="hiperlink" href="#">
-                Siguiente
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/small_arrow_blue.svg">
-              </a>
-            </div>
-          </div>
-          <div class="main-story-item">
-            <div class="story-item-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logos/client-2.png">
-              <div class="story-item-badge">2018</div>
-            </div>
-            <div class="story-item-text">
-              <h4>Caffam</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.</p>
-              <a class="hiperlink" href="#">
-                Siguiente
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/small_arrow_blue.svg">
-              </a>
-            </div>
-          </div>
-          <div class="main-story-item">
-            <div class="story-item-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logos/client-6.png">
-              <div class="story-item-badge">2019</div>
-            </div>
-            <div class="story-item-text">
-              <h4>Acción Fiduciaria</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.</p>
-              <a class="hiperlink" href="#">
-                Siguiente
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/small_arrow_blue.svg">
-              </a>
-            </div>
-          </div>
+          </div> 
+           <?php endwhile; ?>
         </div>
       </div>
     </div>
+
   </section>
   <section class="cta cta-padding">
     <h2>Contáctanos para darte el mejor servicio</h2>
