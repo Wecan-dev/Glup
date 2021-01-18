@@ -36,9 +36,9 @@ $(".main-license-slider").slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   prevArrow:
-    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='http://localhost/glup/wp-content/uploads/2020/11/arrow_left.png'></button>",
+    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='http://159.89.229.55/Glup/wp-content/uploads/2020/11/arrow_left.png'></button>",
   nextArrow:
-    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='http://localhost/glup/wp-content/uploads/2020/11/arrow_right.png'></button>",
+    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='http://159.89.229.55/Glup/wp-content/uploads/2020/11/arrow_right.png'></button>",
   responsive: [
     {
       breakpoint: 991,
@@ -91,10 +91,10 @@ $(".gallery-slider").slick({
   infinite: true,
   slidesToShow: 4,
   slidesToScroll: 1,
-  prevArrow:
-    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='http://localhost/glup/wp-content/uploads/2020/11/arrow_left.png'></button>",
+prevArrow:
+    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='http://159.89.229.55/Glup/wp-content/uploads/2020/11/arrow_left.png'></button>",
   nextArrow:
-    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='http://localhost/glup/wp-content/uploads/2020/11/arrow_right.png'></button>",
+    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='http://159.89.229.55/Glup/wp-content/uploads/2020/11/arrow_right.png'></button>",
   responsive: [
     {
       breakpoint: 1025,

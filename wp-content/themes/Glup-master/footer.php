@@ -24,10 +24,10 @@
             <a class='nav-link' href='<?php bloginfo('url');?>/contacto'>Contacto</a>
           </li>
           <li class='nav-item'>
-            <a class='nav-link' href='#'>Aviso de privacidad</a>
+            <a class='nav-link' href='<?php bloginfo('url');?>/aviso-de-privacidad'>Aviso de privacidad</a>
           </li>
           <li class='nav-item'>
-            <a class='nav-link' href='contact.html'>Ley de protección de datos</a>
+            <a class='nav-link' href='<?php bloginfo('url');?>/ley-de-proteccion-de-datos'>Ley de protección de datos</a>
           </li>
         </ul>
         <ul class='navbar-nav button'>
@@ -78,6 +78,9 @@
   <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
   <script src='<?php echo get_template_directory_uri(); ?>/assets/js/wow.min.js'></script>
   <script src='<?php echo get_template_directory_uri(); ?>/assets/js/slick.min.js'></script>
+<script>
+    var baseUrl = "<?php echo get_template_directory_uri();?>"
+  </script>
   <script src='<?php echo get_template_directory_uri(); ?>/assets/js/main.js'></script>
 
 </body>

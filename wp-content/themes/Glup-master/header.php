@@ -64,7 +64,7 @@
           <a class='nav-link' href='<?php bloginfo('url');?>/apps'>Apps y Soluciones</a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link' href='<?php bloginfo('url');?>/historia'>Historias de Éxito</a>
+          <a class='nav-link' href='<?php bloginfo('url');?>/historia-de-exito'>Historias de Éxito</a>
         </li>
         <li class='nav-item'>
           <a class='nav-link' href='<?php bloginfo('url');?>/jobs'>Jobs</a>

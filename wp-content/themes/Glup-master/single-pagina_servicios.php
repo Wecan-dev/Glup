@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-<?php $loop = new WP_Query( array( 'post_type' => 'banner' , 'category_name' => 'single-servicios' ) ); ?>
-      <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+<?php $loop = new WP_Query( 'post_type=banner&categorias_banner=single-servicios' ); ?>
+    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
   <div class="page-header" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)">
     <div class="container">
       <div class="page-header-content">
@@ -98,58 +98,58 @@
   ?>
       </div>
       <div class="gallery-slider">
+		   <?php if (get_theme_mod('galeria_item_1') != NULL){?>  
         <div class="gallery-item">
-            <?php if (get_theme_mod('galeria_item_1') != NULL){?>  
           <img src="<?php echo get_theme_mod('galeria_item_1'); ?>">
-           <?php }
-  ?>
         </div>
+		           <?php }
+  ?>
+		    <?php if (get_theme_mod('galeria_item_2') != NULL){?>  
         <div class="gallery-item">
-          <?php if (get_theme_mod('galeria_item_2') != NULL){?>  
           <img src="<?php echo get_theme_mod('galeria_item_2'); ?>">
-            <?php }
-  ?>
         </div>
+		   <?php }
+  ?>
+		   <?php if (get_theme_mod('galeria_item_3') != NULL){?>  
         <div class="gallery-item">
-          <?php if (get_theme_mod('galeria_item_3') != NULL){?>  
           <img src="<?php echo get_theme_mod('galeria_item_3'); ?>">
-            <?php }
-  ?>
         </div>
+		  <?php }
+  ?>
+		    <?php if (get_theme_mod('galeria_item_4') != NULL){?>  
         <div class="gallery-item">
-          <?php if (get_theme_mod('galeria_item_4') != NULL){?>  
           <img src="<?php echo get_theme_mod('galeria_item_4'); ?>">
-            <?php }
-  ?>
         </div>
+		    <?php }
+  ?>
+		   <?php if (get_theme_mod('galeria_item_5') != NULL){?>  
         <div class="gallery-item">
-          <?php if (get_theme_mod('galeria_item_5') != NULL){?>  
           <img src="<?php echo get_theme_mod('galeria_item_5'); ?>">
-            <?php }
-  ?>
         </div>
+		    <?php }
+  ?>
+		   <?php if (get_theme_mod('galeria_item_6') != NULL){?>  
         <div class="gallery-item">
-          <?php if (get_theme_mod('galeria_item_6') != NULL){?>  
           <img src="<?php echo get_theme_mod('galeria_item_6'); ?>">
-            <?php }
-  ?>
         </div>
+		   <?php }
+  ?>
+		    <?php if (get_theme_mod('galeria_item_7') != NULL){?>  
         <div class="gallery-item">
-          <?php if (get_theme_mod('galeria_item_7') != NULL){?>  
           <img src="<?php echo get_theme_mod('galeria_item_7'); ?>">
-            <?php }
-  ?>
         </div>
+		    <?php }
+  ?>
+		    <?php if (get_theme_mod('galeria_item_8') != NULL){?>  
         <div class="gallery-item">
-          <?php if (get_theme_mod('galeria_item_8') != NULL){?>  
           <img src="<?php echo get_theme_mod('galeria_item_8'); ?>">
-            <?php }
-  ?>
         </div>
+		    <?php }
+  ?>
       </div>
     </div>
   </section>
-  <section class="cta-bg" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/cta-bg.jpg)">
+  <section class="cta-bg" style="background-image: url(<?php echo get_theme_mod('servicio_background'); ?>)">
     <?php if (get_theme_mod('Contáctanos/servicio_title') != NULL){?>  
     <h2><?php echo get_theme_mod('Contáctanos/servicio_title'); ?></h2>
      <?php }

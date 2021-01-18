@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-<?php $loop = new WP_Query( array( 'post_type' => 'banner' , 'category_name' => 'apps' ) ); ?>
-      <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+<?php $loop = new WP_Query( 'post_type=banner&categorias_banner=apps&posts_per_page=-1' ); ?>
+    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
   <div class="page-header" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)">
     <div class="container">
       <div class="page-header-content">
@@ -101,10 +101,10 @@
           <img src="<?php echo get_the_post_thumbnail_url(); ?>">
           <div class="solution-item-text">
             <div class="solution-title custom-collapse">
-              <h4>Lorem ipsum</h4>
+              <h4><?php the_title(); ?></h4>
               <img class="custom-collapse" src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/arrow_down.svg">
             </div>
-            <p class="content-initial">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
+            <p class="content-initial"><?php the_content(); ?></p>
           </div>
         </div>
          <?php endwhile; ?>

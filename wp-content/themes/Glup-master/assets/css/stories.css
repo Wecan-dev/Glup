@@ -96,8 +96,10 @@
 }
 
 .navbar-nav .nav-item .nav-dropdown {
+	padding: 20px;
+	background-color: #fff;
   position: absolute;
-  padding-left: 8px;
+  padding-left: 20px;
   left: 0;
   top: 100%;
   list-style: none;

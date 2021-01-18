@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-<?php $loop = new WP_Query( array( 'post_type' => 'banner' , 'category_name' => 'jobs' ) ); ?>
- <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+<?php $loop = new WP_Query( 'post_type=banner&categorias_banner=jobs&posts_per_page=-1' ); ?>
+    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
   <div class="page-header" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)">
     <div class="container">
       <div class="page-header-content">

@@ -8,31 +8,31 @@
   </section>
   <section id="cotiza" class="main-cotization bg-lightgray">
     <div class="title">
-      <h2>¡Cotiza Ahora!</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi, amet consectetur adipiscing</p>
+      <h2><?php echo get_theme_mod('cotizacion_title'); ?></h2>
+      <p><?php echo get_theme_mod('cotizacion_subtitle'); ?></p>
     </div>
     <div class="row cotization-grid">
       <div class="col-lg-6">
         <div class="cotization-img">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/form.png">
+          <img src="<?php echo get_theme_mod('cotizacion_image_1'); ?>">
         </div>
       </div>
       <div class="col-lg-6">
         <div class="cotization-form">
           <ul class="nav nav-tabs" id="cotization">
             <li class="nav-item">
-              <a aria-controls="productA" aria-selected="true" class="nav-link active" data-toggle="tab" href="#productA" id="productA-tab" role="tab">Producto A</a>
+              <a aria-controls="productA" aria-selected="true" class="nav-link active" data-toggle="tab" href="#productA" id="productA-tab" role="tab"><?php echo get_theme_mod('producto_title'); ?></a>
             </li>
             <li class="nav-item">
-              <a aria-controls="productB" aria-selected="false" class="nav-link" data-toggle="tab" href="#productB" id="productB-tab" role="tab">Producto B</a>
+              <a aria-controls="productB" aria-selected="false" class="nav-link" data-toggle="tab" href="#productB" id="productB-tab" role="tab"><?php echo get_theme_mod('productob_title'); ?></a>
             </li>
             <li class="nav-item">
-              <a aria-controls="productC" aria-selected="false" class="nav-link" data-toggle="tab" href="#productC" id="productC-tab" role="tab">Producto C</a>
+              <a aria-controls="productC" aria-selected="false" class="nav-link" data-toggle="tab" href="#productC" id="productC-tab" role="tab"><?php echo get_theme_mod('productoc_title'); ?></a>
             </li>
           </ul>
           <div class="tab-content" id="cotizationContent">
             <div aria-labelledby="productA-tab" class="tab-pane fade show active" id="productA" role="tabpanel">
-              <p class="mb-3">Venta de paquetes de horas para soporte y consultoría</p>
+              <p class="mb-3"><?php echo get_theme_mod('producto_subtitle'); ?></p>
               <form>
                 
                   
@@ -42,7 +42,7 @@
               </form>
             </div>
             <div aria-labelledby="productB-tab" class="tab-pane fade" id="productB" role="tabpanel">
-              <p class="mb-3">Venta de paquetes de horas para soporte y consultoría</p>
+              <p class="mb-3"><?php echo get_theme_mod('productob_subtitle'); ?></p>
               <form>
                 <div class="row">
                   <div class="col-lg-6">
@@ -104,7 +104,7 @@
               </form>
             </div>
             <div aria-labelledby="productC-tab" class="tab-pane fade" id="productC" role="tabpanel">
-              <p class="mb-3">Venta de paquetes de horas para soporte y consultoría</p>
+              <p class="mb-3"><?php echo get_theme_mod('productoc_subtitle'); ?></p>
               <form>
                 <div class="row">
                   <div class="col-lg-6">

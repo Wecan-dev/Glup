@@ -983,3 +983,6 @@ textarea.form-control {
   content: "CV";
   -webkit-user-select: none;
 }
+.contact-form.contact-form--full{
+	width: 100% !important;
+}

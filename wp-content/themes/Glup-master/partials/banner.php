@@ -1,6 +1,6 @@
 <section class="main-banner-slider">
-<?php $loop = new WP_Query( array( 'post_type' => 'banner' , 'category_name' => 'inicio' ) ); ?>
-      <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+<?php $loop = new WP_Query( 'post_type=banner&categorias_banner=inicio' ); ?>
+    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
     <div class="main-banner" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
       <div class="container"> 
         <div class="banner-content">

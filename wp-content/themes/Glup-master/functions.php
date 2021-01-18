@@ -41,6 +41,7 @@ function theme_customize_register($wp_customize){
       'description' => 'subtitulo de la galeria',
       'section' => 'galeria',
       'settings' => 'galeria_subtitulo',
+		'type' => 'textarea'
     )));  
   //image
   $wp_customize->add_setting('galeria_item_1');
@@ -156,6 +157,7 @@ function theme_customize_register($wp_customize){
       'description' => 'contenido',
       'section' => 'soporte_tecnico',
       'settings' => 'soporte_tecnico_subtitle',
+		'type' => 'textarea'
     )));  
     // texto de soporte tecnico boton texto
     $wp_customize->add_setting('soporte_tecnico_boton_texto', array(
@@ -193,6 +195,15 @@ function theme_customize_register($wp_customize){
       'priority' => 1,
       'capability' => 'edit_theme_options',
     ));
+    //imagen
+    $wp_customize->add_setting('servicio_background');
+    
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'servicio_background_image_control', array (
+      'label' => 'Imagen',
+      'description' => 'Background',
+      'section' => 'Contáctanos/servicio',
+      'settings' => 'servicio_background'
+    )));
 
      
     // texto de CONTACTO DE SERVICOS 
@@ -214,6 +225,7 @@ function theme_customize_register($wp_customize){
       'description' => 'contenido',
       'section' => 'Contáctanos/servicio',
       'settings' => 'Contáctanos/servicio_subtitle',
+		'type' => 'textarea'
     )));  
 
      // texto de red
@@ -237,8 +249,149 @@ function theme_customize_register($wp_customize){
       'section' => 'Contáctanos/servicio',
       'settings' => 'Contáctanos/servicio_url_boton',
     )));  
-  
+
    //////////////////////////////////////////////////////////////
+   //cotizacion//////////////////////////////////
+   $wp_customize->add_panel('cotizacion',
+          array(
+              'title' => 'Cotizacion',
+              'priority' => 160,
+              'capability' => 'edit_theme_options',
+              )
+          );
+
+    //seccion cotizacion
+    $wp_customize->add_section('cotizacion', array (
+      'title' => 'cotizacion',
+      'panel' => 'cotizacion',
+      'priority' => 1,
+      'capability' => 'edit_theme_options',
+    ));
+    
+    // texto de red
+    $wp_customize->add_setting('cotizacion_title', array(
+      'default' => ''
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'texto_control_cotizacion_title', array (
+      'description' => 'Titulo Principal',
+      'section' => 'cotizacion',
+      'settings' => 'cotizacion_title',
+    )));  
+	 // texto de red
+    $wp_customize->add_setting('cotizacion_subtitle', array(
+      'default' => ''
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'texto_control_cotizacion_subtitle', array (
+      'description' => 'Subtitulo Principal',
+      'section' => 'cotizacion',
+      'settings' => 'cotizacion_subtitle',
+		'type' => 'textarea'
+    )));  
+    //imagen
+    $wp_customize->add_setting('cotizacion_image_1');
+    
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'cotizacion_image_1_image_control', array (
+      'label' => 'Imagen',
+      'description' => 'Imagen',
+      'section' => 'cotizacion',
+      'settings' => 'cotizacion_image_1'
+    )));
+	
+	///Productos/////////////////////////////////
+	   //seccion producto
+ $wp_customize->add_section('producto', array (
+      'title' => 'Producto A',
+      'panel' => 'cotizacion',
+      'priority' => 1,
+      'capability' => 'edit_theme_options',
+    ));
+    
+    // texto de red
+    $wp_customize->add_setting('producto_title', array(
+      'default' => ''
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'texto_control_producto_title', array (
+      'description' => 'Titulo Principal',
+      'section' => 'producto',
+      'settings' => 'producto_title',
+    ))); 
+	  // texto de red
+    $wp_customize->add_setting('producto_subtitle', array(
+      'default' => ''
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'texto_control_producto_subtitle', array (
+      'description' => 'Subtitulo Principal',
+      'section' => 'producto',
+      'settings' => 'producto_subtitle',
+		'type' => 'textarea'
+    ))); 
+	///////////////////////////////////////////////////////
+	 //seccion producto B
+ $wp_customize->add_section('productob', array (
+      'title' => 'Producto B',
+      'panel' => 'cotizacion',
+      'priority' => 1,
+      'capability' => 'edit_theme_options',
+    ));
+    
+    // texto de red
+    $wp_customize->add_setting('productob_title', array(
+      'default' => ''
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'texto_control_productob_title', array (
+      'description' => 'Titulo Principal',
+      'section' => 'productob',
+      'settings' => 'productob_title',
+    ))); 
+	  // texto de red
+    $wp_customize->add_setting('productob_subtitle', array(
+      'default' => ''
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'texto_control_productob_subtitle', array (
+      'description' => 'Subtitulo Principal',
+      'section' => 'productob',
+      'settings' => 'productob_subtitle',
+		'type' => 'textarea'
+    ))); 
+ ///////////////////////
+ 
+	   //seccion producto C
+ $wp_customize->add_section('productoc', array (
+      'title' => 'Producto C',
+      'panel' => 'cotizacion',
+      'priority' => 1,
+      'capability' => 'edit_theme_options',
+    ));
+    
+    // texto de red
+    $wp_customize->add_setting('productoc_title', array(
+      'default' => ''
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'texto_control_productoc_title', array (
+      'description' => 'Titulo Principal',
+      'section' => 'productoc',
+      'settings' => 'productoc_title',
+    ))); 
+	  // texto de red
+    $wp_customize->add_setting('productoc_subtitle', array(
+      'default' => ''
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'texto_control_productoc_subtitle', array (
+      'description' => 'Subtitulo Principal',
+      'section' => 'productoc',
+      'settings' => 'productoc_subtitle',
+		'type' => 'textarea'
+    ))); 
+ ///////////////////////
+ ///////////////////////
     /////jobs/experiencia
   $wp_customize->add_panel('job',
         array(
@@ -328,6 +481,7 @@ function theme_customize_register($wp_customize){
       'description' => 'parrafo',
       'section' => 'jobs_perfil',
       'settings' => 'jobs_perfil_parrafo',
+		'type' => 'textarea'
     )));  
 // texto de perfil
     $wp_customize->add_setting('jobs_perfil_subtitulo_item', array(
@@ -437,6 +591,7 @@ function theme_customize_register($wp_customize){
       'description' => 'parrafo',
       'section' => 'jobs_experiencia',
       'settings' => 'jobs_experiencia_parrafo',
+		'type' => 'textarea'
     )));  
 // texto de experiencia
     $wp_customize->add_setting('jobs_experiencia_subtitulo_item', array(
@@ -479,6 +634,7 @@ function theme_customize_register($wp_customize){
       'settings' => 'jobs_experiencia_item_3',
     )));  
     ///////
+    
        //seccion requisitos///////////////////////////////////////////////////////////////
     $wp_customize->add_section('jobs_requisitos', array (
       'title' => 'Requisitos',
@@ -567,7 +723,6 @@ function theme_customize_register($wp_customize){
       'description' => 'Item 1',
       'section' => 'jobs_requisitos',
       'settings' => 'jobs_requisitos_item_1',
-      'type' => 'textarea'
     )));  
     // texto de requisitos
     $wp_customize->add_setting('jobs_requisitos_item_2', array(
@@ -713,6 +868,7 @@ function theme_customize_register($wp_customize){
       'description' => 'red-social Texto',
       'section' => 'red-social',
       'settings' => 'texto_red_social',
+		'type' => 'textarea'
     )));  
     //imagen
     $wp_customize->add_setting('prenavbar2_image');
@@ -854,7 +1010,93 @@ function theme_customize_register($wp_customize){
       'section' => 'nuestras_soluciones_logos',
       'settings' => 'logos_3'
     )));
+////////////////////Correo//////////////////////////////
+  // contacto
+     $wp_customize->add_panel('contacto',
+          array(
+              'title' => 'Contacto',
+              'priority' => 160,
+              'capability' => 'edit_theme_options',
+              )
+          );
 
+    //seccion correo
+    $wp_customize->add_section('contacto', array (
+      'title' => 'Correo',
+      'panel' => 'contacto',
+      'priority' => 1,
+      'capability' => 'edit_theme_options',
+    ));
+    // texto de red
+    $wp_customize->add_setting('contacto', array(
+      'default' => ''
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'texto_control_contacto', array (
+      'description' => 'Correo electronico',
+      'section' => 'contacto',
+      'settings' => 'contacto',
+    ))); 
+	
+	  //seccion correo
+    $wp_customize->add_section('telefono', array (
+      'title' => 'Correo',
+      'panel' => 'telefono',
+      'priority' => 1,
+      'capability' => 'edit_theme_options',
+    ));
+    // texto de red
+    $wp_customize->add_setting('telefono', array(
+      'default' => ''
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'texto_control_telefono', array (
+      'description' => 'Telefono 1',
+      'section' => 'telefono',
+      'settings' => 'telefono',
+    ))); 
+
+     // texto de red
+    $wp_customize->add_setting('telefono_2', array(
+      'default' => ''
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'texto_control_telefono_2', array (
+      'description' => 'Telefono 2',
+      'section' => 'telefono_2',
+      'settings' => 'telefono_2',
+    ))); 
+//seccion correo
+    $wp_customize->add_section('telefono', array (
+      'title' => 'Telefonos',
+      'panel' => 'contacto',
+      'priority' => 1,
+      'capability' => 'edit_theme_options',
+    ));
+    // texto de red
+    $wp_customize->add_setting('telefono', array(
+      'default' => ''
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'texto_control_telefono', array (
+      'description' => 'Telefono 1',
+      'section' => 'telefono',
+      'settings' => 'telefono',
+    ))); 
+
+     // texto de red
+    $wp_customize->add_setting('telefono_2', array(
+      'default' => ''
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'texto_control_telefono_2', array (
+      'description' => 'Telefono 2',
+      'section' => 'telefono',
+      'settings' => 'telefono_2',
+    ))); 
+	
+	
+/////////////////////////////////////////////////777777
    
 
 } 
@@ -923,6 +1165,43 @@ if ( ! function_exists('banner') ) {
     add_action( 'init', 'banner', 0 );
     
     }
+// Register Proyectos Custom Taxonomy
+function categorias_banner_taxonomy() {
+	$labels = array(
+		'name'                       => _x( '<span class="name_none">Banners</span>', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Banner', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Banner', 'text_domain' ),
+		'all_items'                  => __( 'Todos los banners', 'text_domain' ),
+		'parent_item'                => __( 'Parent Vista', 'text_domain' ),
+		'parent_item_colon'          => __( 'Parent Vista:', 'text_domain' ),
+		'new_item_name'              => __( 'Nueva Vista', 'text_domain' ),
+		'add_new_item'               => __( 'Agregar Nueva Vista', 'text_domain' ),
+		'edit_item'                  => __( 'Editar Vista', 'text_domain' ),
+		'update_item'                => __( 'Actualizar Vista', 'text_domain' ),
+		'view_item'                  => __( 'Ver Item', 'text_domain' ),
+		'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Add or remove items', 'text_domain' ),
+		'choose_from_most_used'      => __( 'Choose from the most used items', 'text_domain' ),
+		'popular_items'              => __( 'Popular Items', 'text_domain' ),
+		'search_items'               => __( 'Buscar Vista', 'text_domain' ),
+		'not_found'                  => __( 'Not Found', 'text_domain' ),
+		'no_terms'                   => __( 'No items', 'text_domain' ),
+		'items_list'                 => __( 'Items list', 'text_domain' ),
+		'items_list_navigation'      => __( 'Items list navigation', 'text_domain' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+		
+	);
+	register_taxonomy( 'categorias_banner', array( 'banner' ), $args );
+}
+add_action( 'init', 'categorias_banner_taxonomy', 0 );
       // Register Custom Post Type
 if ( ! function_exists('servicios') ) {
   
@@ -1215,7 +1494,7 @@ if ( ! function_exists('pilares_soporte') ) {
             'show_ui'               => true,
             'show_in_menu'          => true,
             'menu_position'         => 7,
-            'menu_icon'             => 'dashicons-admin-tools',
+            'menu_icon'             => 'dashicons-networking',
             'show_in_admin_bar'     => true,
             'show_in_nav_menus'     => true,
             'can_export'            => true,
@@ -1276,7 +1555,7 @@ if ( ! function_exists('galeria') ) {
             'show_ui'               => true,
             'show_in_menu'          => true,
             'menu_position'         => 7,
-            'menu_icon'             => 'dashicons-admin-tools',
+            'menu_icon'             => 'dashicons-admin-users',
             'show_in_admin_bar'     => true,
             'show_in_nav_menus'     => true,
             'can_export'            => true,
@@ -1337,7 +1616,7 @@ if ( ! function_exists('historia') ) {
             'show_ui'               => true,
             'show_in_menu'          => true,
             'menu_position'         => 7,
-            'menu_icon'             => 'dashicons-admin-tools',
+            'menu_icon'             => 'dashicons-book-alt',
             'show_in_admin_bar'     => true,
             'show_in_nav_menus'     => true,
             'can_export'            => true,
@@ -1398,7 +1677,7 @@ if ( ! function_exists('soluciones_card') ) {
             'show_ui'               => true,
             'show_in_menu'          => true,
             'menu_position'         => 9,
-            'menu_icon'             => 'dashicons-admin-tools',
+            'menu_icon'             => 'dashicons-edit-page',
             'show_in_admin_bar'     => true,
             'show_in_nav_menus'     => true,
             'can_export'            => true,
@@ -1520,7 +1799,7 @@ if ( ! function_exists('procesos') ) {
             'show_ui'               => true,
             'show_in_menu'          => true,
             'menu_position'         => 9,
-            'menu_icon'             => 'dashicons-admin-tools',
+            'menu_icon'             => 'dashicons-admin-links',
             'show_in_admin_bar'     => true,
             'show_in_nav_menus'     => true,
             'can_export'            => true,
