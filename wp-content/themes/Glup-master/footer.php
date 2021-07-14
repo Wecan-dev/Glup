@@ -9,16 +9,16 @@
             <a class='nav-link' href='<?php bloginfo('url');?>/'>Inicio</a>
           </li>
           <li class='nav-item'>
-            <a class='nav-link' href='<?php bloginfo('url');?>/Service'>Servicios</a>
+            <a class='nav-link' href='<?php bloginfo('url');?>/Servicios'>Servicios</a>
           </li>
           <li class='nav-item'>
-            <a class='nav-link' href='<?php bloginfo('url');?>/apps'>Apps y Soluciones</a>
+            <a class='nav-link' href='<?php bloginfo('url');?>/soluciones'>Soluciones</a>
           </li>
           <li class='nav-item'>
-            <a class='nav-link' href='<?php bloginfo('url');?>/historia'>Historias de Éxito</a>
+            <a class='nav-link' href='<?php bloginfo('url');?>/historia-de-exito'>Historias de Éxito</a>
           </li>
           <li class='nav-item'>
-            <a class='nav-link' href='<?php bloginfo('url');?>/jobs'>Jobs</a>
+            <a class='nav-link' href='<?php bloginfo('url');?>/trabaja-con-nosotros'>Trabaja con Nosotros</a>
           </li>
           <li class='nav-item'>
             <a class='nav-link' href='<?php bloginfo('url');?>/contacto'>Contacto</a>
@@ -40,31 +40,14 @@
     <div class='footer-bottom'>
       <div class='footer-rrss'>
         <ul>
-          <?php if (get_theme_mod('texto_linkedln') != NULL){?>  
+
            <li>
-            <a target=”_blank href="<?php echo get_theme_mod('texto_linkedln') ?>">
+            <a href="https://www.linkedin.com/company/glup/" target="_blank">
               <i class='fa fa-linkedin'></i>
             </a>
           </li>
-         <?php }
-         ?> 
-         <?php if (get_theme_mod('texto_instagram') != NULL){?>  
-          <li>
-            <a target=”_blank href='<?php echo get_theme_mod('texto_instagram') ?>'>
-              <i class='fa fa-instagram'></i>
-            </a>
-          </li>
-           <?php }
-         ?> 
-          <?php if (get_theme_mod('texto_twiter') != NULL){?>  
-          <li>
-            <a target=”_blank href='<?php echo get_theme_mod('texto_twiter') ?>'>
-
-              <i class='fa fa-twitter'></i>
-            </a>
-          </li>
-          <?php }
-         ?> 
+    
+  
         </ul>
       </div>
       <span>Copyright @ 2020 Glup / Developed by Sigma</span>
@@ -83,6 +66,8 @@
   </script>
   <script src='<?php echo get_template_directory_uri(); ?>/assets/js/main.js'></script>
 
+	
+</div>
 </body>
 
 </html>

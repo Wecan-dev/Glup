@@ -107,6 +107,7 @@
   opacity: 0;
   visibility: hidden;
   transition: all ease-in-out 0.2s;
+	width:200px;
 }
 
 .navbar-nav .nav-item .nav-dropdown li {
@@ -140,7 +141,7 @@
 
 .navbar-nav .nav-item .nav-link {
   color: #173246;
-  font-size: 15px;
+  font-size: 13.1px;
   font-family: "HelveticaNeue-Bold";
   transition: all ease-in-out 0.2s;
   letter-spacing: 0.6px;
@@ -245,6 +246,16 @@ footer .navbar-nav {
   footer .navbar-nav:last-child {
     margin: 10px auto;
   }
+}
+@media (min-width: 0px) and (max-width: 767px) {
+.icon-text-box .text h3 {
+    font-size: 18px!important;
+	  }
+	
+	.page-header h1 {
+    font-family: "HelveticaNeue-Bold";
+    font-size: 28px!important;
+		}
 }
 
 footer .navbar-nav .nav-item {
@@ -450,6 +461,12 @@ a.icon-text-box:hover .text h3 {
   color: #6d7278;
   font-family: "HelveticaNeue-Regular";
   font-size: 14px;
+	max-height: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .icon-text-box .hiperlink {
@@ -528,7 +545,7 @@ a.icon-text-box:hover .text h3 {
 }
 
 .tab-pane {
-  padding: 40px 20px;
+  padding: 40px 20px 20px 20px;
 }
 
 .input-group-prepend span {
@@ -625,6 +642,7 @@ textarea.form-control {
 @media (min-width: 0px) and (max-width: 575px) {
   .page-header {
     background-position: 75%;
+	      height: 345px;
   }
 }
 
@@ -912,7 +930,7 @@ textarea.form-control {
   box-shadow: 0 5px 19px 0 rgba(0, 0, 0, 0.11);
   background-color: #fff;
   margin: 0 20px;
-  height: 340px;
+  height: 400px;
 }
 
 .main-story-item .story-item-img {
@@ -993,4 +1011,57 @@ textarea.form-control {
 .cta-padding .btn-custom {
   font-size: 14px;
   letter-spacing: 0.56px;
+}
+@media (min-width: 1024px) and (max-width: 1366px) {
+.navbar-nav .nav-item .nav-link {
+       font-size: 13px!important;
+	 }
+}
+
+@media (width: 1024px) {
+.main-stories {
+    padding: 115px 115px;
+	 }
+	.main-stories-text{
+		margin-left:0;
+	}
+}
+@media (width: 768px) {
+  .navbar{padding: 20px 35px!important;} 
+	
+	.slick-prev {
+    left: -13px;
+		}
+	
+	.slick-next {
+    right: -16px;
+}
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+	.cta h2 {
+    font-size: 20px;
+}
+	
+	.cta-bg {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+	
+	.cta-bg p {
+
+    width: 95%;
+
+}
+	.cta p {
+
+    width: 95%;
+  
+}
+	section.cta.cta-padding{
+		    padding: 60px 20px;
+	}
+	input.form-control {
+    display: flex;
+}
 }

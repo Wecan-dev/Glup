@@ -105,6 +105,7 @@
   opacity: 0;
   visibility: hidden;
   transition: all ease-in-out 0.2s;
+	width:200px;
 }
 
 .navbar-nav .nav-item .nav-dropdown li {
@@ -138,7 +139,7 @@
 
 .navbar-nav .nav-item .nav-link {
   color: #173246;
-  font-size: 15px;
+  font-size: 13.1px;
   font-family: "HelveticaNeue-Bold";
   transition: all ease-in-out 0.2s;
   letter-spacing: 0.6px;
@@ -873,4 +874,16 @@ textarea.form-control {
 
 .contact-btn {
   padding: 14px 30px;
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+.navbar-nav .nav-item .nav-link {
+     font-size: 13px!important;
+	 }
+}
+
+@media (width: 768px) {
+	.navbar {
+    padding: 20px 35px!important;
+}
 }

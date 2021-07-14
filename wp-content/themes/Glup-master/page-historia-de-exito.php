@@ -16,11 +16,14 @@
             <?php $loop = new WP_Query( $args ); ?>
                  <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
     <div class="title">
-      <h3>nuestros</h3>
+    
       <h2><?php the_title(); ?></h2>
     </div>
     <div class="main-clients-text">
-      <p><?php the_content(); ?></p>
+		<div class="container">
+			<p><?php the_content(); ?></p>
+		</div>
+      
     </div>
     <?php if (get_field('clientes_img_item_1') != NULL){?>  
     <div class="main-clients-slider">
@@ -123,7 +126,7 @@
             <h2>historias</h2>
           </div>
           <div class="stories-text">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <p>Estas son algunas experiencias con nuestros clientes que deseamos compartir contigo.</p>
           </div>
           <div class="main-stories-controls">
             <img class="custom-prev" src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/arrow_left_blue.png">
@@ -158,8 +161,8 @@
 
   </section>
   <section class="cta cta-padding">
-    <h2>Contáctanos para darte el mejor servicio</h2>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-    <a class="btn btn-custom light small" href="contact.html">Contacto</a>
+    <h2>Contáctanos, estamos listos para apoyarte. </h2>
+    <p>Cuéntanos más sobre tu necesidad, un consultor se pondrá en contacto contigo a la brevedad para identificar la mejor forma de lograr tus objetivos. </p>
+    <a class="btn btn-custom light small" href="<?php bloginfo('url');?>/servicios">Contacto</a>
   </section>
  <?php get_footer(); ?>

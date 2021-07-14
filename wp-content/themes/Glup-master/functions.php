@@ -10,6 +10,7 @@ the_post_thumbnail( array(100,100) );
 add_theme_support( 'post-thumbnails' );
 /***************Functions theme ********************/
 function theme_customize_register($wp_customize){
+	
   $wp_customize->add_panel('panel1',
         array(
             'title' => 'Galeria',
@@ -118,66 +119,66 @@ function theme_customize_register($wp_customize){
   /////soporte Técnico
   $wp_customize->add_panel('panel2',
         array(
-            'title' => 'Soporte Técnico',
+            'title' => 'CTA Contacto',
             'priority' => 2,
             )
         );
  
-  $wp_customize->add_section('soporte_tecnico', array (
-      'title' => 'Soporte Técnico',
+  $wp_customize->add_section('cta_contacto', array (
+      'title' => 'CTA Contacto',
       'panel' => 'panel2',
       'priority' => 1,
       'capability' => 'edit_theme_options',
     ));
 
      //imagen
-    $wp_customize->add_setting('soporte_tecnico_img');
+    $wp_customize->add_setting('cta_contacto_img');
     
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'soporte_tecnico_img', array (
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'cta_contacto_img', array (
       'description' => 'Ícono',
-      'section' => 'soporte_tecnico',
-      'settings' => 'soporte_tecnico_img'
+      'section' => 'cta_contacto',
+      'settings' => 'cta_contacto_img'
     )));
     // texto de red
-    $wp_customize->add_setting('soporte_tecnico_title', array(
+    $wp_customize->add_setting('cta_contacto_title', array(
       'default' => ''
     ));
     
     $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'texto_control_soporte_tecnico_title', array (
       'description' => 'titulo',
-      'section' => 'soporte_tecnico',
-      'settings' => 'soporte_tecnico_title',
+      'section' => 'cta_contacto',
+      'settings' => 'cta_contacto_title',
     )));  
     // texto de red
-    $wp_customize->add_setting('soporte_tecnico_subtitle', array(
+    $wp_customize->add_setting('cta_contacto_subtitle', array(
       'default' => ''
     ));
     
-    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'texto_control_soporte_tecnico_subtitle', array (
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'texto_control_cta_contacto_subtitle', array (
       'description' => 'contenido',
-      'section' => 'soporte_tecnico',
-      'settings' => 'soporte_tecnico_subtitle',
+      'section' => 'cta_contacto',
+      'settings' => 'cta_contacto_subtitle',
 		'type' => 'textarea'
     )));  
     // texto de soporte tecnico boton texto
-    $wp_customize->add_setting('soporte_tecnico_boton_texto', array(
+    $wp_customize->add_setting('cta_contacto_boton_texto', array(
       'default' => ''
     ));
     
-    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'texto_control_soporte_tecnico_boton_texto', array (
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'texto_control_cta_contacto_boton_texto', array (
       'description' => 'Texto del Boton',
-      'section' => 'soporte_tecnico',
-      'settings' => 'soporte_tecnico_boton_texto',
+      'section' => 'cta_contacto',
+      'settings' => 'cta_contacto_boton_texto',
     )));  
     // texto de soporte tecnico boton URL
-    $wp_customize->add_setting('soporte_tecnico_boton_url', array(
+    $wp_customize->add_setting('cta_contacto_boton_url', array(
       'default' => ''
     ));
     
-    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'texto_control_soporte_tecnico_boton_url', array (
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'texto_control_cta_contacto_boton_url', array (
       'description' => 'URL del Boton',
-      'section' => 'soporte_tecnico',
-      'settings' => 'soporte_tecnico_boton_url',
+      'section' => 'cta_contacto',
+      'settings' => 'cta_contacto_boton_url',
     )));  
   
    //////////////////////////////////////////////////////////////
@@ -1209,9 +1210,9 @@ if ( ! function_exists('servicios') ) {
     function servicios() {
     
         $labels = array(
-            'name'                  => _x( 'servicios', 'Post Type General Name', 'text_domain' ),
+            'name'                  => _x( 'servicio', 'Post Type General Name', 'text_domain' ),
             'singular_name'         => _x( 'servicio', 'Post Type Singular Name', 'text_domain' ),
-            'menu_name'             => __( 'Servicios ', 'text_domain' ),
+            'menu_name'             => __( 'Servicios', 'text_domain' ),
             'name_admin_bar'        => __( 'Servicios', 'text_domain' ),
             'archives'              => __( 'Item Archives', 'text_domain' ),
             'attributes'            => __( 'Item Attributes', 'text_domain' ),
@@ -1242,7 +1243,7 @@ if ( ! function_exists('servicios') ) {
             'description'           => __( 'servicios', 'text_domain' ),
             'labels'                => $labels,
             'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
-            'taxonomies'            => array( 'category', 'post_tag' ),
+            'taxonomies'            => true,
             'hierarchical'          => false,
             'public'                => true,
             'show_ui'               => true,
@@ -1261,6 +1262,7 @@ if ( ! function_exists('servicios') ) {
     
     }
     add_action( 'init', 'servicios', 0 );
+	
 
       // Register Custom Post Type
 if ( ! function_exists('licencia') ) {
@@ -1324,68 +1326,6 @@ if ( ! function_exists('licencia') ) {
     
     }
 
-    // Register Custom Post Type
-if ( ! function_exists('pagina_servicios') ) {
-  
-    // Register Custom Post Type
-    function pagina_servicios() {
-    
-        $labels = array(
-            'name'                  => _x( 'Pagina_servicios', 'Post Type General Name', 'text_domain' ),
-            'singular_name'         => _x( 'Pagina Servicio', 'Post Type Singular Name', 'text_domain' ),
-            'menu_name'             => __( 'Single Servicios', 'text_domain' ),
-            'name_admin_bar'        => __( 'Single Servicios', 'text_domain' ),
-            'archives'              => __( 'Item Archives', 'text_domain' ),
-            'attributes'            => __( 'Item Attributes', 'text_domain' ),
-            'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
-            'all_items'             => __( 'All Items', 'text_domain' ),
-            'add_new_item'          => __( 'Add New Item', 'text_domain' ),
-            'add_new'               => __( 'Add New', 'text_domain' ),
-            'new_item'              => __( 'New Item', 'text_domain' ),
-            'edit_item'             => __( 'Edit Item', 'text_domain' ),
-            'update_item'           => __( 'Update Item', 'text_domain' ),
-            'view_item'             => __( 'View Item', 'text_domain' ),
-            'view_items'            => __( 'View Items', 'text_domain' ),
-            'search_items'          => __( 'Search Item', 'text_domain' ),
-            'not_found'             => __( 'Not found', 'text_domain' ),
-            'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
-            'featured_image'        => __( 'Featured Image', 'text_domain' ),
-            'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
-            'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
-            'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
-            'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
-            'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
-            'items_list'            => __( 'Items list', 'text_domain' ),
-            'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
-            'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
-        );
-        $args = array(
-            'label'                 => __( 'Pagina_servicios', 'text_domain' ),
-            'description'           => __( 'Pagina_servicios', 'text_domain' ),
-            'labels'                => $labels,
-            'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
-            'taxonomies'            => array( 'category', 'post_tag' ),
-            'hierarchical'          => false,
-            'public'                => true,
-            'show_ui'               => true,
-            'show_in_menu'          => true,
-            'menu_position'         => 5,
-            'menu_icon'             => 'dashicons-admin-home',
-            'show_in_admin_bar'     => true,
-            'show_in_nav_menus'     => true,
-            'can_export'            => true,
-            'has_archive'           => true,
-            'exclude_from_search'   => false,
-            'publicly_queryable'    => true,
-            'capability_type'       => 'page',
-        );
-        register_post_type( 'pagina_servicios', $args );
-    
-    }
-    add_action( 'init', 'pagina_servicios', 0 );
-    
-    }
-    
     
        // Register Custom Post Type
 if ( ! function_exists('servicio_de_soporte') ) {
@@ -1448,128 +1388,8 @@ if ( ! function_exists('servicio_de_soporte') ) {
     add_action( 'init', 'servicio_de_soporte', 0 );
     
     }
-     // Register Custom Post Type
-if ( ! function_exists('pilares_soporte') ) {
-  
-    // Register Custom Post Type
-    function pilares_soporte() {
+
     
-        $labels = array(
-            'name'                  => _x( 'Pilares Soporte', 'Post Type General Name', 'text_domain' ),
-            'singular_name'         => _x( 'Pilares Soporte', 'Post Type Singular Name', 'text_domain' ),
-            'menu_name'             => __( 'Pilares Soporte', 'text_domain' ),
-            'name_admin_bar'        => __( 'Pilares Soporte', 'text_domain' ),
-            'archives'              => __( 'Item Archives', 'text_domain' ),
-            'attributes'            => __( 'Item Attributes', 'text_domain' ),
-            'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
-            'all_items'             => __( 'All Items', 'text_domain' ),
-            'add_new_item'          => __( 'Add New Item', 'text_domain' ),
-            'add_new'               => __( 'Add New', 'text_domain' ),
-            'new_item'              => __( 'New Item', 'text_domain' ),
-            'edit_item'             => __( 'Edit Item', 'text_domain' ),
-            'update_item'           => __( 'Update Item', 'text_domain' ),
-            'view_item'             => __( 'View Item', 'text_domain' ),
-            'view_items'            => __( 'View Items', 'text_domain' ),
-            'search_items'          => __( 'Search Item', 'text_domain' ),
-            'not_found'             => __( 'Not found', 'text_domain' ),
-            'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
-            'featured_image'        => __( 'Featured Image', 'text_domain' ),
-            'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
-            'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
-            'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
-            'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
-            'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
-            'items_list'            => __( 'Items list', 'text_domain' ),
-            'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
-            'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
-        );
-        $args = array(
-            'label'                 => __( 'pilares_soporte', 'text_domain' ),
-            'description'           => __( 'pilares_soporte', 'text_domain' ),
-            'labels'                => $labels,
-            'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
-            'taxonomies'            => array( 'category', 'post_tag' ),
-            'hierarchical'          => false,
-            'public'                => true,
-            'show_ui'               => true,
-            'show_in_menu'          => true,
-            'menu_position'         => 7,
-            'menu_icon'             => 'dashicons-networking',
-            'show_in_admin_bar'     => true,
-            'show_in_nav_menus'     => true,
-            'can_export'            => true,
-            'has_archive'           => true,
-            'exclude_from_search'   => false,
-            'publicly_queryable'    => true,
-            'capability_type'       => 'page',
-        );
-        register_post_type( 'pilares_soporte', $args );
-    
-    }
-    add_action( 'init', 'pilares_soporte', 0 );
-    
-    }
-      // Register Custom Post Type
-if ( ! function_exists('galeria') ) {
-  
-    // Register Custom Post Type
-    function galeria() {
-    
-        $labels = array(
-            'name'                  => _x( 'Clientes', 'Post Type General Name', 'text_domain' ),
-            'singular_name'         => _x( 'Clientes', 'Post Type Singular Name', 'text_domain' ),
-            'menu_name'             => __( 'Clientes', 'text_domain' ),
-            'name_admin_bar'        => __( 'Clientes', 'text_domain' ),
-            'archives'              => __( 'Item Archives', 'text_domain' ),
-            'attributes'            => __( 'Item Attributes', 'text_domain' ),
-            'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
-            'all_items'             => __( 'All Items', 'text_domain' ),
-            'add_new_item'          => __( 'Add New Item', 'text_domain' ),
-            'add_new'               => __( 'Add New', 'text_domain' ),
-            'new_item'              => __( 'New Item', 'text_domain' ),
-            'edit_item'             => __( 'Edit Item', 'text_domain' ),
-            'update_item'           => __( 'Update Item', 'text_domain' ),
-            'view_item'             => __( 'View Item', 'text_domain' ),
-            'view_items'            => __( 'View Items', 'text_domain' ),
-            'search_items'          => __( 'Search Item', 'text_domain' ),
-            'not_found'             => __( 'Not found', 'text_domain' ),
-            'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
-            'featured_image'        => __( 'Featured Image', 'text_domain' ),
-            'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
-            'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
-            'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
-            'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
-            'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
-            'items_list'            => __( 'Items list', 'text_domain' ),
-            'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
-            'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
-        );
-        $args = array(
-            'label'                 => __( 'galeria', 'text_domain' ),
-            'description'           => __( 'galeria', 'text_domain' ),
-            'labels'                => $labels,
-            'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
-            'taxonomies'            => array( 'category', 'post_tag' ),
-            'hierarchical'          => false,
-            'public'                => true,
-            'show_ui'               => true,
-            'show_in_menu'          => true,
-            'menu_position'         => 7,
-            'menu_icon'             => 'dashicons-admin-users',
-            'show_in_admin_bar'     => true,
-            'show_in_nav_menus'     => true,
-            'can_export'            => true,
-            'has_archive'           => true,
-            'exclude_from_search'   => false,
-            'publicly_queryable'    => true,
-            'capability_type'       => 'page',
-        );
-        register_post_type( 'galeria', $args );
-    
-    }
-    add_action( 'init', 'galeria', 0 );
-    
-    }
        // Register Custom Post Type
 if ( ! function_exists('historia') ) {
   

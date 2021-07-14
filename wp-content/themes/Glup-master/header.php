@@ -28,6 +28,7 @@
 </head>
 
 <body>
+	<div class="main-content__global">
   <nav class='navbar navbar-expand-lg'>
     <a class='navbar-brand' href='<?php bloginfo('url');?>/'>
       <img src='<?php echo get_template_directory_uri(); ?>/assets/img/logos/logo@3x.png'>
@@ -40,34 +41,30 @@
         <li class='nav-item'>
           <a class='nav-link' href='<?php bloginfo('url');?>/'>Inicio</a>
         </li>
-        <li class='nav-item'>
-          <a class='nav-link' href='<?php bloginfo('url');?>/service'>
+        <li class='nav-item' style="display: flex; align-items: baseline;">
+          <a class='nav-link' href='<?php bloginfo('url');?>/servicios'>
             Servicios
-            <i class='fa fa-chevron-down'></i>
-          </a>
+          </a>     
+			<i class='fa fa-chevron-down'></i>
           <ul class='nav-dropdown'>
-            <li>
-              <a href='<?php bloginfo('url');?>/pagina_servicios/soporte'>Soporte</a>
-            </li>
-            <li>
-              <a href='<?php bloginfo('url');?>/pagina_servicios/consultoria'>Consultoría</a>
-            </li>
-            <li>
-              <a href='<?php bloginfo('url');?>/pagina_servicios/desarrollo'>Desarrollo</a>
-            </li>
-            <li>
-              <a href='<?php bloginfo('url');?>/pagina_servicios/licenciamiento'>Licenciamiento</a>
-            </li>
+			  <?php $args = array( 'post_type' => 'servicios', 'posts_per_page' => '4' ); ?>
+			  <?php $loop = new WP_Query( $args ); ?>
+			  <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+				  <li>
+					  <a href="<?php the_permalink(); ?>"><?php the_title(); ?> </a>
+				  </li>
+			  <?php endwhile; ?>
+          
           </ul>
         </li>
         <li class='nav-item'>
-          <a class='nav-link' href='<?php bloginfo('url');?>/apps'>Apps y Soluciones</a>
+          <a class='nav-link' href='<?php bloginfo('url');?>/soluciones'>Soluciones</a>
         </li>
         <li class='nav-item'>
           <a class='nav-link' href='<?php bloginfo('url');?>/historia-de-exito'>Historias de Éxito</a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link' href='<?php bloginfo('url');?>/jobs'>Jobs</a>
+          <a class='nav-link' href='<?php bloginfo('url');?>/trabaja-con-nosotros'>Trabaja con nosotros</a>
         </li>
         <li class='nav-item'>
           <a class='nav-link' href='<?php bloginfo('url');?>/contacto'>Contacto</a>
@@ -75,7 +72,7 @@
       </ul>
       <ul class='navbar-nav'>
         <li>
-          <a class='btn btn-custom gradient' href='<?php bloginfo('url');?>/#cotiza'>¡Cotiza ahora!</a>
+          <a class='btn btn-custom gradient' href='<?php bloginfo('url');?>/#cotiza'>Cotización Online</a>
         </li>
       </ul>
     </div>

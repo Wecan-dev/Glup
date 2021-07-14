@@ -138,7 +138,7 @@
 
 .navbar-nav .nav-item .nav-link {
   color: #173246;
-  font-size: 15px;
+  font-size: 13.1px;
   font-family: "HelveticaNeue-Bold";
   transition: all ease-in-out 0.2s;
   letter-spacing: 0.6px;
@@ -243,6 +243,12 @@ footer .navbar-nav {
   footer .navbar-nav:last-child {
     margin: 10px auto;
   }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+.navbar-nav .nav-item .nav-link {
+    font-size: 13px!important;
+	 }
 }
 
 footer .navbar-nav .nav-item {
@@ -879,7 +885,7 @@ textarea.form-control {
   text-align: center;
   font-size: 18px;
   font-family: "HelveticaNeue-Regular";
-  color: #173246;
+  /*color: #173246;*/
 }
 
 .main-team-slider .slick-dots {
@@ -909,3 +915,10 @@ textarea.form-control {
   font-family: "HelveticaNeue-Regular";
   margin-right: 20px;
 }
+
+@media (width: 768px) {
+	.navbar {
+    padding: 20px 35px!important;
+}
+}
+

@@ -11,11 +11,14 @@
         <div class="col-lg-3 col-md-6">
           <div class="icon-text-box">
             <div class="icon">
-            <img alt="Imagen servicios" src="<?php echo get_the_post_thumbnail_url(); ?>">
+				<?php if ( get_field( 'icono_de_servicio' ) ) : ?>
+					<img  alt="Imagen servicios" src="<?php the_field( 'icono_de_servicio' ); ?>" />
+				<?php endif ?>
+            
             </div>
             <div class="text">
-              <h3> <?php the_title(); ?> </h3>
-              <p><?php the_content(); ?>   </p>
+              <h3> <?php the_field( 'titulo_de_servicio' ); ?></h3>
+              <p><?php the_field( 'descripcion_de_servicio' ); ?>  </p>
             </div>
           </div>
         </div>

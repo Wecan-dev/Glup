@@ -33,137 +33,15 @@
           <div class="tab-content" id="cotizationContent">
             <div aria-labelledby="productA-tab" class="tab-pane fade show active" id="productA" role="tabpanel">
               <p class="mb-3"><?php echo get_theme_mod('producto_subtitle'); ?></p>
-              <form>
-                
-                  
-                 <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 4, 'title' => false, 'description' => false ) ); ?>
-                  
-                 
-              </form>
+              <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 7, 'title' => false, 'description' => false ) ); ?>
             </div>
             <div aria-labelledby="productB-tab" class="tab-pane fade" id="productB" role="tabpanel">
               <p class="mb-3"><?php echo get_theme_mod('productob_subtitle'); ?></p>
-              <form>
-                <div class="row">
-                  <div class="col-lg-6">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/user.png">
-                        </span>
-                      </div>
-                      <input class="form-control" placeholder="Nombre" type="text">
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/phone.png">
-                        </span>
-                      </div>
-                      <input class="form-control" placeholder="Teléfono" type="text">
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/envelope.png">
-                        </span>
-                      </div>
-                      <input class="form-control" placeholder="Correo" type="text">
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/multimedia-option.png">
-                        </span>
-                      </div>
-                      <input class="form-control" placeholder="Adjunto" type="text">
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text align-items-start">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/draw.png">
-                        </span>
-                      </div>
-                      <textarea class="form-control" placeholder="Mensaje" type="text"></textarea>
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="text-center">
-                      <button class="btn btn-custom secondary radius-8" type="submit">Enviar</button>
-                    </div>
-                  </div>
-                </div>
-              </form>
+              <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 8, 'title' => false, 'description' => false ) ); ?>
             </div>
-            <div aria-labelledby="productC-tab" class="tab-pane fade" id="productC" role="tabpanel">
-              <p class="mb-3"><?php echo get_theme_mod('productoc_subtitle'); ?></p>
-              <form>
-                <div class="row">
-                  <div class="col-lg-6">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/user.png">
-                        </span>
-                      </div>
-                      <input class="form-control" placeholder="Nombre" type="text">
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/phone.png">
-                        </span>
-                      </div>
-                      <input class="form-control" placeholder="Teléfono" type="text">
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/envelope.png">
-                        </span>
-                      </div>
-                      <input class="form-control" placeholder="Correo" type="text">
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/multimedia-option.png">
-                        </span>
-                      </div>
-                      <input class="form-control" placeholder="Adjunto" type="text">
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text align-items-start">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/draw.png">
-                        </span>
-                      </div>
-                      <textarea class="form-control" placeholder="Mensaje" type="text"></textarea>
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="text-center">
-                      <button class="btn btn-custom secondary radius-8" type="submit">Enviar</button>
-                    </div>
-                  </div>
-                </div>
-              </form>
+			   <div aria-labelledby="productC-tab" class="tab-pane fade" id="productC" role="tabpanel">
+              <p class="mb-3"><?php echo get_theme_mod('productob_subtitle'); ?></p>
+              <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 9, 'title' => false, 'description' => false ) ); ?>
             </div>
           </div>
         </div>

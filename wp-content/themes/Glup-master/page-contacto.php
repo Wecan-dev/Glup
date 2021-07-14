@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php $loop = new WP_Query( 'post_type=banner&categorias_banner=jobs&posts_per_page=-1' ); ?>
+<?php $loop = new WP_Query( 'post_type=banner&categorias_banner=contacto&posts_per_page=-1' ); ?>
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
   <div class="page-header" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)">
     <div class="container">
@@ -22,7 +22,7 @@
               </h3>
               <ul>
                 <li>
-                  <a href="mailto:info@glup.com"><?php echo get_theme_mod('contacto'); ?> </a>
+                  <a href="mailto:info@glup.com.co"><?php echo get_theme_mod('contacto'); ?> </a>
                 </li>
               </ul>
             </div>
@@ -33,22 +33,18 @@
               </h3>
               <ul>
                 <li>
-                  <a href="tel:3446775436"><?php echo get_theme_mod('telefono'); ?></a>
+                  <a href="tel:5713161617"><?php echo get_theme_mod('telefono'); ?></a>
                 </li>
-                <li>
-                  <a href="tel:3245776788"><?php echo get_theme_mod('telefono_2'); ?></a>
-                </li>
+          
               </ul>
             </div>
           </div>
         </div>
         <div class="col-lg-8">
           <div class="contact-form contact-form--full">
-            <h3>Contacto</h3>
-            <p>Si deseas alguno de nuestros servicios estamos para ayudarte</p>
-            <form>
-            <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 2, 'title' => false, 'description' => false ) ); ?>
-            </form>
+            <h3>Contáctanos</h3>
+            <p>Cuéntanos más sobre tu necesidad, uno de nuestros consultores se pondrá en contacto contigo a la brevedad. </p>
+         	<?php echo FrmFormsController::get_form_shortcode( array( 'id' => 10, 'title' => false, 'description' => false ) ); ?>
           </div>
         </div>
       </div>

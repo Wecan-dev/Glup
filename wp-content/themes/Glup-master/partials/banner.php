@@ -7,7 +7,7 @@
           <h3><?php the_field('primer_subtitle'); ?></h3>
           <h1><?php the_title(); ?></h1>
           <p><?php the_field('segundo_subtitle'); ?></p>
-          <a class="btn btn-custom dark" href="<?php echo the_field('link_del_boton'); ?>"><?php the_field('boton-banner'); ?></a>
+          <a class="btn btn-custom dark" href="http://159.89.229.55/Glup/contacto/">Contáctanos</a>
         </div>
       </div>
     </div>

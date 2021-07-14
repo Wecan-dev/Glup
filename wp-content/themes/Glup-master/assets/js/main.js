@@ -36,9 +36,9 @@ $(".main-license-slider").slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   prevArrow:
-    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='http://159.89.229.55/Glup/wp-content/uploads/2020/11/arrow_left.png'></button>",
+    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='http://159.89.229.55/Glup/wp-content/uploads/2020/11/arrow_left_blue.png'></button>",
   nextArrow:
-    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='http://159.89.229.55/Glup/wp-content/uploads/2020/11/arrow_right.png'></button>",
+    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='http://159.89.229.55/Glup/wp-content/uploads/2020/11/arrow_right_blue.png'></button>",
   responsive: [
     {
       breakpoint: 991,
@@ -63,10 +63,10 @@ $(".main-team-slider").slick({
   infinite: true,
   slidesToShow: 4,
   slidesToScroll: 1,
-  prevArrow:
-    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='http://localhost/glup/wp-content/uploads/2020/11/arrow_left.png'></button>",
+   prevArrow:
+    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='http://159.89.229.55/Glup/wp-content/uploads/2020/11/arrow_left_blue.png'></button>",
   nextArrow:
-    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='http://localhost/glup/wp-content/uploads/2020/11/arrow_right.png'></button>",
+    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='http://159.89.229.55/Glup/wp-content/uploads/2020/11/arrow_right_blue.png    '></button>",
   responsive: [
     {
       breakpoint: 991,
@@ -127,9 +127,9 @@ $(".solutions-slider").slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   prevArrow:
-    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='http://localhost/glup/wp-content/uploads/2020/11/arrow_left.png'></button>",
+    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='http://159.89.229.55/Glup/wp-content/uploads/2020/11/arrow_left_blue.png'></button>",
   nextArrow:
-    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='http://localhost/glup/wp-content/uploads/2020/11/arrow_right.png'></button>",
+    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='http://159.89.229.55/Glup/wp-content/uploads/2020/11/arrow_right_blue.png    '></button>",
   responsive: [
     {
       breakpoint: 1024,
@@ -157,14 +157,16 @@ $(".solutions-slider").slick({
   ],
 });
 
+
+
 $(".main-clients-slider").slick({
   infinite: true,
   slidesToShow: 6,
   slidesToScroll: 1,
   prevArrow:
-    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='http://localhost/glup/wp-content/uploads/2020/11/arrow_left_blue.png'></button>",
+    "<button class='slick-prev slick-arrow' aria-label='Previous' type='button'><img class='slick-prev' src='http://159.89.229.55/Glup/wp-content/uploads/2020/11/arrow_left_blue.png'></button>",
   nextArrow:
-    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='http://localhost/glup/wp-content/uploads/2020/11/arrow_right_blue.png'></button>",
+    "<button class='slick-next slick-arrow' aria-label='Next' type='button'><img class='slick-next' src='http://159.89.229.55/Glup/wp-content/uploads/2020/11/arrow_right_blue.png    '></button>",
   responsive: [
     {
       breakpoint: 1024,
@@ -200,9 +202,9 @@ $(".main-stories-slider").slick({
   nextArrow: $(".custom-next"),
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1025,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
       },
     },
@@ -222,3 +224,47 @@ $(".main-stories-slider").slick({
     },
   ],
 });
+
+$('.multiple-items').slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 500,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: false,
+    dots:false,
+    responsive: [
+        {
+            breakpoint: 700,
+            settings: {
+                arrows: false,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+            }
+        }
+    ]
+});
+
+
+$('.arrow__visible').click(function(){
+	if ($(this).parent().parent('.solution-item-text').hasClass('active')){
+        $('.solution-item-text').removeClass('active')
+		$('.solution-item-text p').removeClass('active')
+		
+    }else{
+		  $('.solution-item-text').removeClass('active')
+		$('.solution-item-text p').removeClass('active')
+        $(this).parent().parent('.solution-item-text').addClass('active')
+		$(this).parent().siblings('p').addClass('active')
+    }
+
+	
+})
